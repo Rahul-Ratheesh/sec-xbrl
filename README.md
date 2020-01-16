@@ -62,11 +62,31 @@ when you are on a slow Internet connection.
 
     python3 loadSECfilings.py -s AMZN -d 10-K
   
-
 This will download all 10-K SEC filings of Amazon.
 
+<h4>Manual Approach to process the filings</h4>
 
-<h4>valSECfilings</h4>
+After installing Arelle, setup a PostgreSQL database and enable the plugin as per the documentation found here: http://arelle.org/arelle/documentation/xbrl-database/. Open the downloaded zip file in Arelle. Go to Tools menu and choose the option "Store to XBRL DB". Enter the DB connection parameters and click OK. Wait until a success message is shown in the status bar. 
+
+Use database queries to select the required information.
+
+<h5>Examples</h5>
+
+To retrieve the Cash and Cash equivalents information from the balance sheet of Amazon.
+
+`select distinct period.end_date, fact.effective_value
+from fact inner join element
+on fact.element_fk = element.element_pk
+inner join period
+on fact.period_fk = period.period_pk 
+inner join entity_identifier
+on fact.entity_identifier_fk = entity_identifier.entity_identifier_pk
+and element.name = 'CashAndCashEquivalentsAtCarryingValue'
+and aspect_value_set_fk is NULL
+and identifier = '0001018724'
+order by end_date;`
+
+<h4>Automated processing of XBRL files</h4>
 
 Work in progress
 
