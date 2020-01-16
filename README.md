@@ -21,8 +21,9 @@ limitations under the License.
 
 Idea of this fork is to remove the dependency on RaptorXML server but instead use Arelle's open source platform for processing XBRL files.
 
-In addition to the standard Python libraries, you also need to install the Python
-feedparser module/library available here: https://pypi.python.org/pypi/feedparser and the BeautifulSoup module/library available here https://pypi.org/project/beautifulsoup4/
+In addition to the standard Python libraries, you also need to install 
++ Python feedparser module/library available here: https://pypi.python.org/pypi/feedparser
++ BeautifulSoup module/library available here: https://pypi.org/project/beautifulsoup4/
 
 For more information on Arelle, please see here: http://arelle.org/arelle/
 
