@@ -42,7 +42,7 @@ ZIP file per filing submitted to the SEC on your drive. If you call this script
 again for the current or any previous month at a later day, it will only download
 any files that are new and have not yet been downloaded before.
 
-		loadSECfilings.py -s <symbol> -d <doc_type>
+    loadSECfilings.py -s <symbol> -d <doc_type>
 
 This creates a subdirectory sec/symbol/doc_type and then downloads all SEC XBRL filings from the EDGAR system for the given trading symbol and the given type (10-Q, 10-K etc)
 
@@ -59,7 +59,7 @@ WARNING: If you download all years available (2005-2014) this will be about 127,
 and take about 18GB of data on your hard disk, so please use with caution, especially 
 when you are on a slow Internet connection.
 
-	python3 loadSECfilings.py -s AMZN -d 10-K
+  python3 loadSECfilings.py -s AMZN -d 10-K
 
 This will download all 10-K SEC filings of Amazon.
 
