@@ -59,7 +59,8 @@ WARNING: If you download all years available (2005-2014) this will be about 127,
 and take about 18GB of data on your hard disk, so please use with caution, especially 
 when you are on a slow Internet connection.
 
-  python3 loadSECfilings.py -s AMZN -d 10-K
+    python3 loadSECfilings.py -s AMZN -d 10-K
+  
 
 This will download all 10-K SEC filings of Amazon.
 
